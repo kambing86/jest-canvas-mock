@@ -82,7 +82,7 @@ const compositeOperations = [
 ];
 
 function getTransformSlice(ctx) {
-  return ctx._transformStack[ctx._stackIndex].slice();
+  return ctx._transformStack[ctx._stackIndex] ? ctx._transformStack[ctx._stackIndex].slice() : [];
 }
 
 /**
